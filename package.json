@@ -1,0 +1,15 @@
+{
+  "name": "taro-plugin-compiler-optimization",
+  "version": "1.0.0",
+  "description": "a taro plugin to optimize taro compiler speed",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "taro",
+    "taro-plugin"
+  ],
+  "author": "CANntyield",
+  "license": "ISC"
+}
