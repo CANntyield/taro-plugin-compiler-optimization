@@ -1,6 +1,11 @@
 ### 介绍
 采用多核心和缓存提升Taro编译打包速度的Taro插件
 
+### 注意
+
+仅支持taro3,react技术栈。css缓存仅支持scss语法。
+由于thread-loader限制，该插件不支持vue框架,h5打包。
+
 ### 用法
 ```
 npm install --save-dev thread-loader cache-loader taro-plugin-compiler-optimization
