@@ -17,7 +17,12 @@ const config = {
   // 项目产出目录
   outputRoot: 'dist',
   // Taro 插件配置
-  plugins: ['taro-plugin-compiler-optimization'],
+  // plugins: ['taro-plugin-compiler-optimization'],
+  plugins: [
+    ['taro-plugin-compiler-optimization', {
+      scssCache: false, // 默认关闭cache-loader缓存scss策略
+    }]
+  ],
   // 全局变量设置
   defineConstants: {},
   // 文件 copy 配置

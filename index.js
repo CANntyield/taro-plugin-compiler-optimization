@@ -1,4 +1,4 @@
-module.exports = (ctx) => {
+module.exports = (ctx, options = { scssCache: false }) => {
   ctx.modifyWebpackChain(args => {
     const chain = args.chain
     chain.module.rules.delete('script')
@@ -22,7 +22,9 @@ module.exports = (ctx) => {
         },
       },
     })
-    chain.module.rule('scss').oneOf('0').use('cacheLoader').loader('cache-loader').before('1')
-    chain.module.rule('scss').oneOf('1').use('cacheLoader').loader('cache-loader').before('1')
+    if (options.scssCache) {
+      chain.module.rule('scss').oneOf('0').use('cacheLoader').loader('cache-loader').before('1')
+      chain.module.rule('scss').oneOf('1').use('cacheLoader').loader('cache-loader').before('1')
+    }
   })
 }
