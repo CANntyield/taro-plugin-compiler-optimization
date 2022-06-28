@@ -1,4 +1,4 @@
-module.exports = (ctx, options = { scssCache: false }) => {
+module.exports = (ctx, options = { scssCache: true }) => {
   ctx.modifyWebpackChain(args => {
     const chain = args.chain
     chain.module.rules.delete('script')

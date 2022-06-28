@@ -14,7 +14,11 @@ npm install --save-dev thread-loader cache-loader taro-plugin-compiler-optimizat
 ```
 // 将其配置到taro config.js中的plugins中
 // 根目录/config/index.js
-plugins: ['taro-plugin-compiler-optimization']
+plugins: [
+    ['taro-plugin-compiler-optimization', {
+        scssCache: false, // 默认关闭cache-loader缓存scss策略
+    }]
+]
 ```
 
 ### 效果展示
