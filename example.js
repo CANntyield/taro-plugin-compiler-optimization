@@ -20,7 +20,7 @@ const config = {
   // plugins: ['taro-plugin-compiler-optimization'],
   plugins: [
     ['taro-plugin-compiler-optimization', {
-      scssCache: false, // 默认关闭cache-loader缓存scss策略
+      closeScssCache: false, // 默认开启cache-loader缓存scss策略
     }]
   ],
   // 全局变量设置
